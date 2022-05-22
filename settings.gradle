@@ -1,7 +1,4 @@
 pluginManagement {
-	plugins {
-		id "org.jetbrains.kotlin.jvm" version "1.6.21"
-	}
 	repositories {
 		google()
 	    maven {
@@ -11,7 +8,7 @@ pluginManagement {
 	    gradlePluginPortal()
 	}
 }
-rootProject.name = "java-project"
+rootProject.name = "some-algorithms"
 include(
-	//":module",
+	":main",
 )
