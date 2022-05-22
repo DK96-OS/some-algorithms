@@ -15,6 +15,8 @@ public final class AlgorithmValidationTest {
 
 	private final int[] smallOddData;
 
+	private final int[] pseudoRngData;
+
 	/** Initialize data arrays during construction.
 	 */
 	public AlgorithmValidationTest() {
@@ -23,6 +25,9 @@ public final class AlgorithmValidationTest {
 		);
 		smallOddData = IntegerArrayDataProvider.valleyDistribution(
 			201, 5000
+		);
+		pseudoRngData = IntegerArrayDataProvider.pseudoRandomRange(
+			1000, 20, 100, 1
 		);
 	}
 
@@ -53,6 +58,21 @@ public final class AlgorithmValidationTest {
 		);
 		assertEquals(
 			200, result
+		);
+	}
+
+	@ParameterizedTest
+	@ArgumentsSource(
+		AlgorithmArgumentsProvider.class
+	)
+	public void testSearchMaxDistancePseudoRNG(
+		final MaxDistanceInterface algorithm
+	) {
+		var result = algorithm.searchMaxDistance(
+			pseudoRngData
+		);
+		assertEquals(
+			994, result
 		);
 	}
 
