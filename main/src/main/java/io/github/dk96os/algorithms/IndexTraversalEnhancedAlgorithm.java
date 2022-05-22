@@ -14,6 +14,7 @@ public class IndexTraversalEnhancedAlgorithm
 		for (
 			int i = 0; i < array.length; ++i
 		) for (
+			// Reverse Array Index Traversal order
 			int j = array.length - 1; j > i; --j
 		) {
 			if (array[i] == array[j]) {
