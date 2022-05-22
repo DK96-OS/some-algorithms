@@ -18,7 +18,8 @@ public final class AlgorithmArgumentsProvider
 	) throws Exception {
 		return Stream.of(
 			new InitialAlgorithm(),
-			new IndexTraversalEnhancedAlgorithm()
+			new IndexTraversalEnhancedAlgorithm(),
+			new IndexTraversalEnhancedWithBreakAlgorithm()
 		).map(Arguments::of);
 	}
 
