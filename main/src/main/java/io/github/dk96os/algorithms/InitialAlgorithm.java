@@ -2,13 +2,15 @@ package io.github.dk96os.algorithms;
 
 /** The starting point for developing an algorithm
  */
-public final class InitialAlgorithm {
+public final class InitialAlgorithm
+	implements MaxDistanceInterface {
 
 	/** A function that looks for the maximum distance between equal values.
 	 * @param array An input array of integer values.
 	 * @return The largest distance between any two equal integers.
 	 */
-	public static int searchMaxDistance(
+	@Override
+	public int searchMaxDistance(
 		final int[] array
 	) {
 		int distance = 0;
