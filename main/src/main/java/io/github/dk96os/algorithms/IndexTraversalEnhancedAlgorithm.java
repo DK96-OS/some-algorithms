@@ -3,7 +3,7 @@ package io.github.dk96os.algorithms;
 /** Searches secondary indices in reverse order.
  * @author DK96-OS : 2022
  */
-public class IndexTraversalEnhancedAlgorithm
+public final class IndexTraversalEnhancedAlgorithm
 	implements MaxDistanceInterface {
 
 	@Override

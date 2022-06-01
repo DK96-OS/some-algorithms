@@ -4,7 +4,7 @@ package io.github.dk96os.algorithms;
  *  and uses a breaking condition (enabled by reverse order)
  * @author DK96-OS : 2022
  */
-public class IndexTraversalEnhancedWithBreakAlgorithm
+public final class IndexTraversalEnhancedWithBreakAlgorithm
 	implements MaxDistanceInterface {
 
 	@Override
