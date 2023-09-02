@@ -1,11 +1,11 @@
-package io.github.dk96os.algorithms;
+package maxdistance.algorithms;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ArgumentsSource;
 
-import io.github.dk96os.algorithms.data.IntegerArrayDataProvider;
+import maxdistance.data.IntegerArrayDataProvider;
 
 /** Testing the Initial Algorithm
  */

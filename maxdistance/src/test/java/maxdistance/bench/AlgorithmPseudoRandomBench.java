@@ -1,14 +1,14 @@
-package io.github.dk96os.algorithms.bench;
+package maxdistance.bench;
 
-import static io.github.dk96os.algorithms.data.IntegerArrayDataProvider.pseudoRandomRange;
+import static maxdistance.data.IntegerArrayDataProvider.pseudoRandomRange;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ArgumentsSource;
 
-import io.github.dk96os.algorithms.AlgorithmArgumentsProvider;
-import io.github.dk96os.algorithms.MaxDistanceInterface;
+import maxdistance.algorithms.AlgorithmArgumentsProvider;
+import maxdistance.algorithms.MaxDistanceInterface;
 
 /** Benchmarking the Algorithms against pseudo-random data sets.
  * @author DK96-OS : 2022

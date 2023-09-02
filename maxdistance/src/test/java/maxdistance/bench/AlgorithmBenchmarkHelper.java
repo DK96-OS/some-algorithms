@@ -1,8 +1,8 @@
-package io.github.dk96os.algorithms.bench;
+package maxdistance.bench;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import io.github.dk96os.algorithms.MaxDistanceInterface;
+import maxdistance.algorithms.MaxDistanceInterface;
 
 /** Benchmark Methods for use in Tests.
  * @author DK96-OS : 2022

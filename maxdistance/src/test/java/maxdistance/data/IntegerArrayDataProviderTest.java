@@ -1,8 +1,8 @@
-package io.github.dk96os.algorithms.data;
+package maxdistance.data;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
-import static io.github.dk96os.algorithms.data.IntegerArrayDataProvider.pseudoRandomRange;
-import static io.github.dk96os.algorithms.data.IntegerArrayDataProvider.valleyDistribution;
+import static maxdistance.data.IntegerArrayDataProvider.pseudoRandomRange;
+import static maxdistance.data.IntegerArrayDataProvider.valleyDistribution;
 
 import org.junit.jupiter.api.Test;
 
