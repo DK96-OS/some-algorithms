@@ -1,4 +1,4 @@
-package io.github.dk96os.algorithms;
+package maxdistance.algorithms;
 
 /** The starting point for developing an algorithm
  */

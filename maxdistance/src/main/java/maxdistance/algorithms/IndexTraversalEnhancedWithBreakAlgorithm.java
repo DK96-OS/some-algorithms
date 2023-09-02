@@ -1,4 +1,4 @@
-package io.github.dk96os.algorithms;
+package maxdistance.algorithms;
 
 /** Searches secondary indices in reverse order,
  *  and uses a breaking condition (enabled by reverse order)

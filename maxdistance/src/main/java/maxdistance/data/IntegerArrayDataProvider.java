@@ -1,4 +1,4 @@
-package io.github.dk96os.algorithms.data;
+package maxdistance.data;
 
 import java.util.Random;
 

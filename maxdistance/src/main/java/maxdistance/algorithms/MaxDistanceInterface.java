@@ -1,4 +1,4 @@
-package io.github.dk96os.algorithms;
+package maxdistance.algorithms;
 
 /** Search Maximum Distance - Algorithm Interface
  * @author DK96-OS : 2022

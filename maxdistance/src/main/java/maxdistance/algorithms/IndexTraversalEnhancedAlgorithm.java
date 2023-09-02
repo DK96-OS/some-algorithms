@@ -1,4 +1,4 @@
-package io.github.dk96os.algorithms;
+package maxdistance.algorithms;
 
 /** Searches secondary indices in reverse order.
  * @author DK96-OS : 2022
