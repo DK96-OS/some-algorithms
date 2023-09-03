@@ -24,7 +24,8 @@ public final class AlgorithmArgumentsProvider
 			new InitialAlgorithm(),
 			new IndexTraversalEnhancedAlgorithm(),
 			new IndexTraversalEnhancedWithBreakAlgorithm(),
-			new DistanceAwareBreakingAlgorithm()
+			new DistanceAwareBreakingAlgorithm(),
+			new DoubleDistanceBreakingAlgorithm()
 		).map(Arguments::of);
 	}
 
