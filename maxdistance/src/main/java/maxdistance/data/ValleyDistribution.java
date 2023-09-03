@@ -3,7 +3,8 @@ package maxdistance.data;
 /** A Distribution that starts at some peak value at the edges,
  * and decreases linearly towards the center.
  */
-public final class ValleyDistribution {
+public final class ValleyDistribution
+	implements AlgorithmDataProvider {
 
 	public final int arrayLength;
 	public final int edgeValue;
@@ -54,6 +55,7 @@ public final class ValleyDistribution {
 	/** Returns the Distribution's Data Array.
 	 * @return The Array.
 	 */
+	@Override
 	public int[] getArray() {
 		return mArray;
 	}
