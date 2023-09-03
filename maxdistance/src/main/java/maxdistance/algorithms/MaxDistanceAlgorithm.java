@@ -3,7 +3,7 @@ package maxdistance.algorithms;
 /** Search Maximum Distance - Algorithm Interface
  * @author DK96-OS : 2022
  */
-public interface MaxDistanceInterface {
+public interface MaxDistanceAlgorithm {
 
 	/** A function that looks for the maximum distance between equal values.
 	 * @param array An input array of integer values.

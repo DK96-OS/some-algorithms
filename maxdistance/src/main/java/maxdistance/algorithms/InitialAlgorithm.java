@@ -3,7 +3,7 @@ package maxdistance.algorithms;
 /** The starting point for developing an algorithm
  */
 public final class InitialAlgorithm
-	implements MaxDistanceInterface {
+	implements MaxDistanceAlgorithm {
 
 	/** A function that looks for the maximum distance between equal values.
 	 * @param array An input array of integer values.

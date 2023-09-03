@@ -5,7 +5,7 @@ package maxdistance.algorithms;
  * @author DK96-OS : 2022
  */
 public final class IndexTraversalEnhancedWithBreakAlgorithm
-	implements MaxDistanceInterface {
+	implements MaxDistanceAlgorithm {
 
 	@Override
 	public int searchMaxDistance(
