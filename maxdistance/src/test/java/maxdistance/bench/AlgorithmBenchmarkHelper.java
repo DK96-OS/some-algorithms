@@ -2,7 +2,7 @@ package maxdistance.bench;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import maxdistance.algorithms.MaxDistanceInterface;
+import maxdistance.algorithms.MaxDistanceAlgorithm;
 
 /** Benchmark Methods for use in Tests.
  * @author DK96-OS : 2022
@@ -17,7 +17,7 @@ public final class AlgorithmBenchmarkHelper {
 	 * @return The system time in nanoseconds to process the data set.
 	 */
 	public static long nanoTime(
-		final MaxDistanceInterface algorithm,
+		final MaxDistanceAlgorithm algorithm,
 		final int[] dataset,
 		final int expectedResult
 	) {
@@ -35,7 +35,7 @@ public final class AlgorithmBenchmarkHelper {
 	 * @param value The value to print beside the Algorithm name.
 	 */
 	public static void print(
-		final MaxDistanceInterface algorithm,
+		final MaxDistanceAlgorithm algorithm,
 		final long value
 	) {
 		final String algName = algorithm.getClass().getSimpleName();

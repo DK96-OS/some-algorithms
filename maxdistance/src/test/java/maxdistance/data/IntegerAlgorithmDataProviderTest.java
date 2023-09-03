@@ -1,50 +1,49 @@
 package maxdistance.data;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
-import static maxdistance.data.IntegerArrayDataProvider.pseudoRandomRange;
-import static maxdistance.data.IntegerArrayDataProvider.valleyDistribution;
 
 import org.junit.jupiter.api.Test;
 
 /** Testing the Integer Array Data Provider
  * @author DK96-OS : 2022
  */
-public final class IntegerArrayDataProviderTest {
+public final class IntegerAlgorithmDataProviderTest {
 
 	@Test
 	public void testValleyDistributionSmallEvenLength() {
-		var data = valleyDistribution(
+		var data = new ValleyDistribution(
 			10, 20
 		);
 		assertArrayEquals(
 			new int[]{
 				20, 19, 18, 17, 16, 16, 17, 18, 19, 20
-			}, data
+			}, data.getArray()
 		);
 	}
 
 	@Test
 	public void testValleyDistributionSmallOddLength() {
-		var data = valleyDistribution(
+		var data = new ValleyDistribution(
 			9, 20
 		);
 		assertArrayEquals(
 			new int[]{
 				20, 19, 18, 17, 16, 17, 18, 19, 20
-			}, data
+			}, data.getArray()
 		);
 	}
 
 	@Test
 	public void testPseudoRandomSmallEqualSeeds() {
-		var result1 = pseudoRandomRange(
+		var result1 = new PseudorandomDistribution(
 			100, 40, 20, 88L
 		);
-		var result2 = pseudoRandomRange(
+		var result2 = new PseudorandomDistribution(
 			100, 40, 20, 88L
 		);
 		assertArrayEquals(
-			result1, result2
+			result1.getArray(),
+			result2.getArray()
 		);
 	}
 

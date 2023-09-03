@@ -5,29 +5,38 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ArgumentsSource;
 
-import maxdistance.data.IntegerArrayDataProvider;
+import maxdistance.data.PseudorandomDistribution;
+import maxdistance.data.ValleyDistribution;
 
 /** Testing the Initial Algorithm
  */
 public final class AlgorithmValidationTest {
 
-	private final int[] smallEvenData;
+	private final ValleyDistribution smallEvenData;
 
-	private final int[] smallOddData;
+	private final ValleyDistribution smallOddData;
 
-	private final int[] pseudoRngData;
+	private final PseudorandomDistribution pseudoRngData1;
+	private final PseudorandomDistribution pseudoRngData2;
+	private final PseudorandomDistribution pseudoRngData3;
 
 	/** Initialize data arrays during construction.
 	 */
 	public AlgorithmValidationTest() {
-		smallEvenData = IntegerArrayDataProvider.valleyDistribution(
+		smallEvenData = new ValleyDistribution(
 			200, 5000
 		);
-		smallOddData = IntegerArrayDataProvider.valleyDistribution(
+		smallOddData = new ValleyDistribution(
 			201, 5000
 		);
-		pseudoRngData = IntegerArrayDataProvider.pseudoRandomRange(
+		pseudoRngData1 = new PseudorandomDistribution(
 			1000, 20, 100, 1
+		);
+		pseudoRngData2 = new PseudorandomDistribution(
+			2000, 200, 1000, 1
+		);
+		pseudoRngData3 = new PseudorandomDistribution(
+			5000, -1200, 10000, 1
 		);
 	}
 
@@ -36,10 +45,10 @@ public final class AlgorithmValidationTest {
 		AlgorithmArgumentsProvider.class
 	)
 	public void testSearchMaxDistanceSmallEvenData(
-		final MaxDistanceInterface algorithm
+		final MaxDistanceAlgorithm algorithm
 	) {
 		var result = algorithm.searchMaxDistance(
-			smallEvenData
+			smallEvenData.getArray()
 		);
 		assertEquals(
 			199, result
@@ -51,10 +60,10 @@ public final class AlgorithmValidationTest {
 		AlgorithmArgumentsProvider.class
 	)
 	public void testSearchMaxDistanceSmallOddData(
-		final MaxDistanceInterface algorithm
+		final MaxDistanceAlgorithm algorithm
 	) {
 		var result = algorithm.searchMaxDistance(
-			smallOddData
+			smallOddData.getArray()
 		);
 		assertEquals(
 			200, result
@@ -66,13 +75,43 @@ public final class AlgorithmValidationTest {
 		AlgorithmArgumentsProvider.class
 	)
 	public void testSearchMaxDistancePseudoRNG(
-		final MaxDistanceInterface algorithm
+		final MaxDistanceAlgorithm algorithm
 	) {
 		var result = algorithm.searchMaxDistance(
-			pseudoRngData
+			pseudoRngData1.getArray()
 		);
 		assertEquals(
 			994, result
+		);
+	}
+
+	@ParameterizedTest
+	@ArgumentsSource(
+		AlgorithmArgumentsProvider.class
+	)
+	public void testSearchMaxDistancePseudoRNG2(
+		final MaxDistanceAlgorithm algorithm
+	) {
+		var result = algorithm.searchMaxDistance(
+			pseudoRngData2.getArray()
+		);
+		assertEquals(
+			1952, result
+		);
+	}
+
+	@ParameterizedTest
+	@ArgumentsSource(
+		AlgorithmArgumentsProvider.class
+	)
+	public void testSearchMaxDistancePseudoRNG3(
+		final MaxDistanceAlgorithm algorithm
+	) {
+		var result = algorithm.searchMaxDistance(
+			pseudoRngData3.getArray()
+		);
+		assertEquals(
+			4691, result
 		);
 	}
 

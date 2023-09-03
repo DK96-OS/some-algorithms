@@ -3,7 +3,7 @@ package maxdistance.bench;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ArgumentsSource;
 
-import maxdistance.algorithms.MaxDistanceInterface;
+import maxdistance.algorithms.MaxDistanceAlgorithm;
 import maxdistance.data.ValleyDistribution;
 import maxdistance.algorithms.AlgorithmArgumentsProvider;
 
@@ -27,7 +27,7 @@ public final class AlgorithmValleyBench {
 		AlgorithmArgumentsProvider.class
 	)
 	public void testDataset1(
-		final MaxDistanceInterface algorithm
+		final MaxDistanceAlgorithm algorithm
 	) {
 		long timeRequired = AlgorithmBenchmarkHelper.nanoTime(
 			algorithm,
@@ -44,7 +44,7 @@ public final class AlgorithmValleyBench {
 		AlgorithmArgumentsProvider.class
 	)
 	public void testDataset2(
-		final MaxDistanceInterface algorithm
+		final MaxDistanceAlgorithm algorithm
 	) {
 		long timeRequired = AlgorithmBenchmarkHelper.nanoTime(
 			algorithm,

@@ -23,7 +23,8 @@ public final class AlgorithmArgumentsProvider
 		return Stream.of(
 			new InitialAlgorithm(),
 			new IndexTraversalEnhancedAlgorithm(),
-			new IndexTraversalEnhancedWithBreakAlgorithm()
+			new IndexTraversalEnhancedWithBreakAlgorithm(),
+			new DistanceAwareBreakingAlgorithm()
 		).map(Arguments::of);
 	}
 
